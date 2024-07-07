@@ -3,6 +3,7 @@ import api from '../../../api/$api'
 import aspida from '@aspida/axios'
 import axios from 'axios'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const client = api(
   aspida(axios, { baseURL: 'https://668889880ea28ca88b8572c2.mockapi.io/' })
@@ -20,6 +21,8 @@ export default function Aspida() {
   return (
     <QueryClientProvider client={queryClient}>
       <div>
+        <Link to='/'>＜ Home</Link>
+
         <h2>Aspida</h2>
 
         <h3>GET /api/users</h3>
